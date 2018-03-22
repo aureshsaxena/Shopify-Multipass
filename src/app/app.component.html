@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h2>Enter the values <h3 style="color:red;">{{ errorMessage }}</h3></h2>
+<ul>
+  <li>
+      <h2>FName:</h2><p><input  [(ngModel)]="customer.first_name"   /></p>
+  </li>
+  <li>
+    <h2>LName:</h2><p><input  [(ngModel)]="customer.last_name"  /></p>
+
+  </li>
+  <li>
+    <h2>Email:</h2><p><input  [(ngModel)]="customer.email" valid type="email" /></p>
+  </li>
+  <li>
+    <h2>Address:</h2><p><input  [(ngModel)]="address.address1"  /></p>
+  </li>
+  <li>
+    <h2>City:</h2><p><input  [(ngModel)]="address.city"  /></p>
+  </li>
+  <li>
+    <h2>Country:</h2><p><input  [(ngModel)]="address.country"  /></p>
+  </li>
+  <li>
+    <h2>Province:</h2><p><input  [(ngModel)]="address.province"  /></p>
+  </li>
+  <li>
+    <h2>Zip:</h2><p><input  [(ngModel)]="address.zip"  /></p>
+  </li>
+  <li>
+    <h2>Time:</h2><p><input  [(ngModel)]="customer.addtimed"  class="date-time"/></p>
+  </li>
+  <li class="button">
+    <input (click)="onShopifyLogin()" value="Login TO Shopify" type="button" />
+  </li>
+  <li class="button" *ngIf="showLogUrl">
+    <a href="{{ logUrl }}" target="_blank">Click to Login</a>
+  </li>
+</ul>
